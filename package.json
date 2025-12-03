@@ -1,0 +1,19 @@
+{
+  "name": "node-hello-world-minimal",
+  "version": "1.0.0",
+  "description": "Node.js minimal example",
+  "author": "Steve Martinelli <s.martinelli@gmail.com>",
+  "main": "app.js",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IBM/node-hello-world-minimal.git"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^4.22.1"
+  }
+}

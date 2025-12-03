@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Example Project</title>
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4bb.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main class="hero">
+        <section class="card-fancy fade-in" role="main" aria-labelledby="main-title">
+            <div class="left">
+                <span class="badge-accent">پروژهٔ آموزشی</span>
+                <h1 id="main-title">سلام!</h1>
+                <p class="lead">به پروژهٔ <span id="greetName">...</span> خوش آمدید</p>
+            </div>
+            <div class="right text-center">
+                <img src="https://cdn.jsdelivr.net/gh/encharm/Font-Awesome-SVG-PNG/black/svg/rocket.svg" alt="" style="width:74px; opacity:0.95; margin-bottom:8px;" />
+            </div>
+        </section>
+    </main>
+
+    <script>
+        fetch('/api/name')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('greetName').textContent = data.name;
+            });
+    </script>
+</body>
+</html>
